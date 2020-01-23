@@ -49,8 +49,8 @@
     <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="1.1.1" />
     <PackageReference Include="Microsoft.Extensions.Logging.Filter" Version="1.1.2" />
     <PackageReference Include="Uno.Microsoft.Toolkit.Uwp.UI.Controls" Version="5.1.0-build.200.gf9c311b069" />
-    <PackageReference Include="Uno.UI" Version="2.1.0-dev.799" />
-    <PackageReference Include="Uno.UI.RemoteControl" Version="2.1.0-dev.799" Condition="'$(Configuration)'=='Debug'" />
+    <PackageReference Include="Uno.UI" Version="2.1.0-dev.839" />
+    <PackageReference Include="Uno.UI.RemoteControl" Version="2.1.0-dev.839" Condition="'$(Configuration)'=='Debug'" />
     <PackageReference Include="Uno.Wasm.Bootstrap" Version="1.0.10" />
     <DotNetCliToolReference Include="Uno.Wasm.Bootstrap.Cli" Version="1.0.10" />
     <PackageReference Include="Reactive.Wasm" Version="1.2.2" />
