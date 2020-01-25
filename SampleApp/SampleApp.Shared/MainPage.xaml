@@ -1,0 +1,63 @@
+﻿<Page
+    x:Class="SampleApp.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SampleApp.Infrastructure"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:core="using:Microsoft.Xaml.Interactions.Core"
+    xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
+    xmlns:sampleApp="using:SampleApp"
+    mc:Ignorable="d" DataContext="{Binding Source={StaticResource Composition}, Path=Root}">
+
+    <Page.Resources>
+        <sampleApp:SectionIconConverter x:Key="SectionIconConverter" />
+        <local:SectionConverter x:Key="ItemConverter" />
+        <local:UnitConverter x:Key="UnitConverter" />
+    </Page.Resources>
+
+    <interactivity:Interaction.Behaviors>
+        <core:EventTriggerBehavior EventName="Loaded">
+            <core:InvokeCommandAction Command="{Binding GoToDefault}" InputConverter="{StaticResource UnitConverter}" />
+        </core:EventTriggerBehavior>
+    </interactivity:Interaction.Behaviors>
+
+    <NavigationView OpenPaneLength="160" IsBackButtonVisible="Collapsed" MenuItemsSource="{Binding Sections}"
+                    IsBackEnabled="{Binding CanGoBack}" SelectedItem="{Binding SelectedItem, Mode=TwoWay}">
+
+        <NavigationView.MenuItemTemplate>
+            <DataTemplate x:DataType="local:Section">
+                <Grid Height="40" HorizontalAlignment="Left" ToolTipService.ToolTip="{Binding Name}">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition x:Name="IconColumn" Width="48" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Viewbox Child="{Binding Converter={StaticResource SectionIconConverter}}" Margin="-32,12,0,12" />
+                    <TextBlock Grid.Column="1" Margin="-16,12,16,12" Text="{Binding Name}"
+                               VerticalAlignment="Center" />
+                </Grid>
+            </DataTemplate>
+        </NavigationView.MenuItemTemplate>
+
+
+        <interactivity:Interaction.Behaviors>
+            <core:EventTriggerBehavior EventName="ItemInvoked">
+                <core:EventTriggerBehavior.Actions>
+                    <core:InvokeCommandAction Command="{Binding ItemInvoked}"
+                                              InputConverter="{StaticResource ItemConverter}" />
+                </core:EventTriggerBehavior.Actions>
+            </core:EventTriggerBehavior>
+            <core:EventTriggerBehavior EventName="BackRequested">
+                <core:EventTriggerBehavior.Actions>
+                    <core:InvokeCommandAction Command="{Binding GoBack}"
+                                              InputConverter="{StaticResource ItemConverter}" />
+                </core:EventTriggerBehavior.Actions>
+            </core:EventTriggerBehavior>
+        </interactivity:Interaction.Behaviors>
+
+        <Frame x:Name="InnerFrame" />
+
+    </NavigationView>
+
+</Page>
