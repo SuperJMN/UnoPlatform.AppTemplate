@@ -7,7 +7,7 @@ It's ready to use and includes the basic things to start without having to deal 
 # What does it include?
 - Uno Platform
 - Reactive UI
-- EasyRPC (using ASP.NET 3.0)
+- EasyRPC (using ASP.NET Core 3.0)
 - Windows Community Toolkit
 
 The application just loads a simple view that delivers data from a service using EasyRPC.
