@@ -9,7 +9,7 @@
     <DefineConstants>$(DefineConstants);__WASM__</DefineConstants>
   </PropertyGroup>
   <ItemGroup Condition="'$(TargetFramework)'=='xamarinios10' or '$(TargetFramework)'=='monoandroid80' or '$(TargetFramework)'=='monoandroid90' or '$(TargetFramework)'=='netstandard2.0'">
-    <PackageReference Include="Uno.UI" Version="2.1.0-dev.870" />
+    <PackageReference Include="Uno.UI" Version="2.1.0-dev.941" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="**\*.xaml" Exclude="bin\**\*.xaml;obj\**\*.xaml" />
@@ -23,7 +23,7 @@
 
   <ItemGroup>
     <PackageReference Include="Grace" Version="7.1.0" />
-    <PackageReference Include="ReactiveUI.Uno" Version="11.1.12" />
+    <PackageReference Include="ReactiveUI.Uno" Version="11.1.23" />
     <PackageReference Include="Serilog.Sinks.Debug" Version="1.0.1" />
     <PackageReference Include="Uno.Microsoft.Toolkit.Uwp.UI.Controls" Version="5.1.0-build.200.gf9c311b069" />
     <PackageReference Include="Uno.Microsoft.Xaml.Behaviors.Uwp.Managed" Version="2.0.1-uno.28" />
