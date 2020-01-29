@@ -13,7 +13,7 @@ namespace SampleApp.Infrastructure
         private readonly ObservableAsPropertyHelper<bool> canGoBack;
 
 
-        public MainViewModel(INavigation navigation, IEnumerable<Section> sections)
+        public MainViewModel(INavigation navigation, IList<Section> sections)
         {
             this.navigation = navigation;
             GoToDefault = ReactiveCommand.CreateFromTask(() => navigation.Go(Sections.First().ViewModelType));
@@ -35,7 +35,7 @@ namespace SampleApp.Infrastructure
 
         public ReactiveCommand<Unit, Unit> GoToDefault { get; }
 
-        public IEnumerable<Section> Sections { get; }
+        public IList<Section> Sections { get; }
 
         public ReactiveCommand<Unit, Task> GoBack { get; }
 
