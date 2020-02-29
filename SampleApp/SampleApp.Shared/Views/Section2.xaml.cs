@@ -3,9 +3,9 @@
 
 namespace SampleApp.Views
 {
-    public sealed partial class SampleSection : UserControl
+    public sealed partial class Section2 : UserControl
     {
-        public SampleSection()
+        public Section2()
         {
             this.InitializeComponent();
         }

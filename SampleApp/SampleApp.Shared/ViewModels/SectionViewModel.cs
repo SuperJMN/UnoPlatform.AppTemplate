@@ -7,32 +7,30 @@ using AutoMapper;
 using ReactiveUI;
 using SampleApp.Infrastructure;
 using SampleApp.Services;
+using TestApp.Shared;
 using Uno.Disposables;
 
 namespace SampleApp.ViewModels
 {
-    public class SampleSectionViewModel : ReactiveObject, IDisposable
+    public abstract class SectionViewModel : ReactiveObject, IDisposable
     {
         private readonly ObservableAsPropertyHelper<bool> isBusy;
         private readonly ObservableAsPropertyHelper<List<ItemViewModel>> items;
         private readonly CompositeDisposable disposables = new CompositeDisposable();
 
-        public SampleSectionViewModel(IMyService service, IMapper mapper, IDialogService dialogService)
+        public SectionViewModel(IMyService service, IMapper mapper, IDialogService dialogService)
         {
             Fetch = ReactiveCommand.CreateFromObservable(() =>
                 Observable.FromAsync(service.GetItems)
                     .Select(list => list.Select(mapper.Map<ItemViewModel>).ToList()));
 
-            ShowError = ReactiveCommand.CreateFromTask<Exception>(e => dialogService.Show("Error", $"There has been an error while fetching data from the service."));
-            Fetch.ThrownExceptions.InvokeCommand(ShowError);
+            Fetch.ShowExceptions(dialogService).DisposeWith(disposables);
             
             isBusy = Fetch.IsExecuting.ToProperty(this, vm => vm.IsBusy);
             items = Fetch.ToProperty(this, vm => vm.Items);
 
-            Fetch.Execute().Catch(Observable.Return(Enumerable.Empty<ItemViewModel>())).Subscribe();
+            Fetch.Execute().Catch(Observable.Empty<List<ItemViewModel>>()).Subscribe();
         }
-
-        public ReactiveCommand<Exception, Unit> ShowError { get; set; }
 
         public bool IsBusy => isBusy.Value;
 
@@ -45,7 +43,6 @@ namespace SampleApp.ViewModels
             isBusy?.Dispose();
             items?.Dispose();
             disposables?.Dispose();
-            ShowError?.Dispose();
             Fetch?.Dispose();
         }
     }

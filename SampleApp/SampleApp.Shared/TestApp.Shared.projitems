@@ -18,23 +18,40 @@
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ErrorHandleMixin.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Composition.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)InterfaceNamingConvention.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)MainPage.xaml.cs">
       <DependentUpon>%(Filename)</DependentUpon>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)SectionIconConverter.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\SampleSectionViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Section1ViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ItemViewModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Views\SampleSection.xaml.cs">
-      <DependentUpon>SampleSection.xaml</DependentUpon>
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Section2ViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Section3ViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\SectionViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Section1.xaml.cs">
+      <DependentUpon>Section1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Section2.xaml.cs">
+      <DependentUpon>Section2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Section3.xaml.cs">
+      <DependentUpon>Section3.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Include="$(MSBuildThisFileDirectory)MainPage.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="$(MSBuildThisFileDirectory)Views\SampleSection.xaml">
+    <Page Include="$(MSBuildThisFileDirectory)Views\Section2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Views\Section1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Views\Section3.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -50,5 +67,10 @@
   </ItemGroup>
   <ItemGroup>
     <PRIResource Include="$(MSBuildThisFileDirectory)Strings\en\Resources.resw" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="D:\Repos\SuperJMN\UnoPlatform.AppTemplate\SampleApp\SampleApp.Shared\Views\SampleSection - Copy %282%29.xaml.cs">
+      <DependentUpon>SampleSection - Copy %282%29.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
 </Project>

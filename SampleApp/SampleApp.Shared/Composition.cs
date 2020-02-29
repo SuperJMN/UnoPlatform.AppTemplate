@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Windows.UI.Xaml.Controls;
 using AutoMapper;
 using EasyRpc.DynamicClient;
 using EasyRpc.DynamicClient.Grace;
@@ -35,7 +36,9 @@ namespace SampleApp
         {
             var vmToViewMaps = new Dictionary<Type, Type>
             {
-                {typeof(SampleSectionViewModel), typeof(SampleSection)},
+                {typeof(Section1ViewModel), typeof(Section1)},
+                {typeof(Section2ViewModel), typeof(Section2)},
+                {typeof(Section3ViewModel), typeof(Section3)},
             };
             
             map.AddRange(vmToViewMaps);
@@ -45,7 +48,9 @@ namespace SampleApp
         {
             var sections = new[]
             {
-                new Section("Sample Section", typeof(SampleSectionViewModel)),
+                new Section("Section 1", typeof(Section1ViewModel)){ Icon = new SymbolIcon(Symbol.Home)},
+                new Section("Section 2", typeof(Section2ViewModel)){ Icon = new SymbolIcon(Symbol.Page)},
+                new Section("Section 3", typeof(Section3ViewModel)){ Icon = new SymbolIcon(Symbol.Page2)},
             };
 
             mappings.AddRange(sections);

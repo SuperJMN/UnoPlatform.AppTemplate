@@ -11,7 +11,6 @@
     mc:Ignorable="d" DataContext="{Binding Source={StaticResource Composition}, Path=Root}">
 
     <Page.Resources>
-        <sampleApp:SectionIconConverter x:Key="SectionIconConverter" />
         <local:SectionConverter x:Key="ItemConverter" />
         <local:UnitConverter x:Key="UnitConverter" />
     </Page.Resources>
@@ -33,7 +32,7 @@
                         <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
 
-                    <Viewbox Child="{Binding Converter={StaticResource SectionIconConverter}}" Margin="-32,12,0,12" />
+                    <Viewbox Child="{Binding Icon}" Margin="-32,12,0,12" />
                     <TextBlock Grid.Column="1" Margin="-16,12,16,12" Text="{Binding Name}"
                                VerticalAlignment="Center" />
                 </Grid>
