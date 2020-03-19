@@ -5,11 +5,11 @@ using AutoMapper;
 using EasyRpc.DynamicClient;
 using EasyRpc.DynamicClient.Grace;
 using Grace.DependencyInjection;
-using SampleApp.Infrastructure;
 using SampleApp.Services;
 using SampleApp.ViewModels;
 using SampleApp.Views;
 using Uno.Extensions;
+using Zafiro.UI.Infrastructure.Uno;
 
 namespace SampleApp
 {

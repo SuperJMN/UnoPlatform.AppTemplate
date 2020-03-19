@@ -78,6 +78,9 @@
     <PackageReference Include="Uno.UniversalImageLoader" Version="1.9.32" />
     <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="1.1.1" />
     <PackageReference Include="Microsoft.Extensions.Logging.Filter" Version="1.1.2" />
+    <PackageReference Include="Zafiro.UI.Infrastructure.Uno">
+      <Version>1.0.1</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
@@ -102,10 +105,6 @@
     <AndroidResource Include="Resources\values\Styles.xml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\SampleApp.Infrastructure\SampleApp.Infrastructure.csproj">
-      <Project>{c57f9d25-6b75-493b-a262-98b39ff7d747}</Project>
-      <Name>SampleApp.Infrastructure</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\SampleApp.Services\SampleApp.Services.csproj">
       <Project>{04442ecd-76a4-47d6-9e7a-120dee32ac8d}</Project>
       <Name>SampleApp.Services</Name>

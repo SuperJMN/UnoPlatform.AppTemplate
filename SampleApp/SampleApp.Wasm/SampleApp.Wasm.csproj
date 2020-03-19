@@ -56,10 +56,10 @@
     <DotNetCliToolReference Include="Uno.Wasm.Bootstrap.Cli" Version="1.0.10" />
     <PackageReference Include="Reactive.Wasm" Version="1.2.2" />
     <PackageReference Include="ReactiveUI.Uno" Version="11.2.1" />
+    <PackageReference Include="Zafiro.UI.Infrastructure.Uno" Version="1.0.1" />
   </ItemGroup>
   
   <ItemGroup>
-    <ProjectReference Include="..\..\SampleApp.Infrastructure\SampleApp.Infrastructure.csproj" />
     <ProjectReference Include="..\..\SampleApp.Services\SampleApp.Services.csproj" />
   </ItemGroup>
   <Import Project="..\SampleApp.Shared\TestApp.Shared.projitems" Label="Shared" />

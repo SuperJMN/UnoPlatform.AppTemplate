@@ -31,6 +31,9 @@
     <PackageReference Include="Uno.Microsoft.Toolkit.Uwp.UI.Controls">
       <Version>5.1.0-build.200.gf9c311b069</Version>
     </PackageReference>
+    <PackageReference Include="Zafiro.UI.Infrastructure.Uno">
+      <Version>1.0.1</Version>
+    </PackageReference>
   </ItemGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -133,10 +136,6 @@
     <Content Include="Properties\Default.rd.xml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\SampleApp.Infrastructure\SampleApp.Infrastructure.csproj">
-      <Project>{c57f9d25-6b75-493b-a262-98b39ff7d747}</Project>
-      <Name>SampleApp.Infrastructure</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\SampleApp.Services\SampleApp.Services.csproj">
       <Project>{04442ecd-76a4-47d6-9e7a-120dee32ac8d}</Project>
       <Name>SampleApp.Services</Name>

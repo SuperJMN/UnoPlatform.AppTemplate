@@ -5,10 +5,10 @@ using System.Reactive;
 using System.Reactive.Linq;
 using AutoMapper;
 using ReactiveUI;
-using SampleApp.Infrastructure;
 using SampleApp.Services;
 using TestApp.Shared;
 using Uno.Disposables;
+using Zafiro.UI.Infrastructure.Uno;
 
 namespace SampleApp.ViewModels
 {

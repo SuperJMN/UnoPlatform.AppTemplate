@@ -1,5 +1,5 @@
 ﻿using Windows.UI.Xaml.Navigation;
-using SampleApp.Infrastructure.Navigation;
+using Zafiro.UI.Infrastructure.Uno.Navigation;
 
 namespace SampleApp
 {

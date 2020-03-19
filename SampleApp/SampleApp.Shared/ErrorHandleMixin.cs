@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Reactive.Linq;
 using ReactiveUI;
-using SampleApp.Infrastructure;
+using Zafiro.UI.Infrastructure.Uno;
 
 namespace TestApp.Shared
 {
