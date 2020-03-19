@@ -29,7 +29,20 @@ namespace SampleApp
                 c.Export<InterfaceNamingConvention>().As<INamingConventionService>();
             });
 
-            container.ProxyNamespace("http://localhost:61207", namespaces: typeof(Anchor).Namespace);
+            var uri = GetServiceUri();
+
+            container.ProxyNamespace(uri, namespaces: typeof(Anchor).Namespace);
+        }
+
+        private static string GetServiceUri()
+        {
+            var port = 61207;
+#if __ANDROID__
+            var domain = "10.0.2.2";
+#else
+            var domain = "localhost";
+#endif
+            return $"http://{domain}:{port}";
         }
 
         protected override void ConfigureViewModelToViewMaps(IDictionary<Type, Type> map)
