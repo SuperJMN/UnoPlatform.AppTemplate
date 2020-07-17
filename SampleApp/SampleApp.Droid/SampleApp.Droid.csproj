@@ -71,15 +71,15 @@
     <PackageReference Include="NodaTime.Serialization.JsonNet" Version="3.0.0" />
     <PackageReference Include="Reactive.Wasm" Version="1.2.2" />
     <PackageReference Include="ReactiveUI.Uno" Version="11.4.17" />
-    <PackageReference Include="Zafiro.UI.Infrastructure.Uno" Version="1.0.3" />
-    
     <PackageReference Include="AutoMapper" Version="10.0.0" />
     <PackageReference Include="EasyRpc.DynamicClient.Grace" Version="4.0.0-Beta1113" />
     <PackageReference Include="Grace" Version="7.1.1" />
     <PackageReference Include="ReactiveUI.Uno" Version="11.4.17" />
     <PackageReference Include="Zafiro.UI.Infrastructure.Uno" Version="1.0.3" />
     <PackageReference Include="Uno.Microsoft.Toolkit.Uwp.UI.Controls" Version="5.1.0-build.200.gf9c311b069" />
-
+    <PackageReference Include="Zafiro.Uno">
+      <Version>2.2.36</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />

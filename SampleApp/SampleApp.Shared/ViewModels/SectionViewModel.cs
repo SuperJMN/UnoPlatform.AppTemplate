@@ -8,7 +8,7 @@ using ReactiveUI;
 using SampleApp.Services;
 using TestApp.Shared;
 using Uno.Disposables;
-using Zafiro.UI.Infrastructure.Uno;
+using Zafiro.Core.UI;
 
 namespace SampleApp.ViewModels
 {

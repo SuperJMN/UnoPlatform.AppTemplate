@@ -31,8 +31,11 @@
     <PackageReference Include="Uno.Microsoft.Toolkit.Uwp.UI.Controls">
       <Version>5.1.0-build.200.gf9c311b069</Version>
     </PackageReference>
-    <PackageReference Include="Zafiro.UI.Infrastructure.Uno">
-      <Version>1.0.3</Version>
+    <PackageReference Include="Zafiro.Core">
+      <Version>2.2.51</Version>
+    </PackageReference>
+    <PackageReference Include="Zafiro.Uno">
+      <Version>2.2.36</Version>
     </PackageReference>
   </ItemGroup>
   <PropertyGroup>

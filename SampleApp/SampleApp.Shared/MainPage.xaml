@@ -6,7 +6,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:core="using:Microsoft.Xaml.Interactions.Core"
     xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
-    xmlns:uno="using:Zafiro.UI.Infrastructure.Uno"
+    xmlns:uno="using:Zafiro.Uno.Infrastructure"
     mc:Ignorable="d" DataContext="{Binding Source={StaticResource Composition}, Path=Root}">
 
     <Page.Resources>

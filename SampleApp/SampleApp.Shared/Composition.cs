@@ -9,7 +9,7 @@ using SampleApp.Services;
 using SampleApp.ViewModels;
 using SampleApp.Views;
 using Uno.Extensions;
-using Zafiro.UI.Infrastructure.Uno;
+using Zafiro.Uno.Infrastructure;
 
 namespace SampleApp
 {
