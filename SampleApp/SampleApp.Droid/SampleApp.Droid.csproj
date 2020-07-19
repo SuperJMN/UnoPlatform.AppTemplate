@@ -78,7 +78,7 @@
     <PackageReference Include="Zafiro.UI.Infrastructure.Uno" Version="1.0.3" />
     <PackageReference Include="Uno.Microsoft.Toolkit.Uwp.UI.Controls" Version="5.1.0-build.200.gf9c311b069" />
     <PackageReference Include="Zafiro.Uno">
-      <Version>2.2.36</Version>
+      <Version>2.3.0</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
