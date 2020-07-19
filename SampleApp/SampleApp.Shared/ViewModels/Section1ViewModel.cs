@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using SampleApp.Services;
-using Zafiro.UI.Infrastructure.Uno;
+using Zafiro.Core.UI;
 
 namespace SampleApp.ViewModels
 {

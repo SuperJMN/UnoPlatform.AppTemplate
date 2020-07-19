@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Reactive.Linq;
 using ReactiveUI;
-using Zafiro.UI.Infrastructure.Uno;
+using Zafiro.Core.UI;
 
 namespace TestApp.Shared
 {
@@ -11,7 +11,7 @@ namespace TestApp.Shared
         {
             return command.ThrownExceptions.SelectMany(exception =>
             {
-                return Observable.FromAsync(() => dialogService.Show("An error has occurred", exception.Message));
+                return Observable.FromAsync(() => dialogService.Notice("An error has occurred", exception.Message));
             }).Subscribe();
         }
     }
